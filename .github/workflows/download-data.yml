@@ -26,6 +26,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Push data on github
         run: |
+          git config --global user.name 'Romain'
+          git config --global user.email 'romain.fontugne@gmail.com'
           git add .
           git commit -am 'new data'
           git push
