@@ -25,7 +25,7 @@ jobs:
 
       # Runs a set of commands using the runners shell
       - name: Push data on github
-        run:
+        run: |
           git add .
           git commit -am 'new data'
           git push
