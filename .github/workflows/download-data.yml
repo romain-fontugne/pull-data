@@ -31,6 +31,8 @@ jobs:
         run: |
           git config --global user.name 'Romain'
           git config --global user.email 'romain.fontugne@gmail.com'
-          git add .
-          git commit -am 'new data'
-          git push
+          if [[ `git status --porcelain` ]]; then
+            git add .
+            git commit -am 'new data'
+            git push
+          fi
