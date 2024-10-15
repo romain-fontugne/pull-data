@@ -29,8 +29,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Push data on github
         run: |
-          git config --global user.name 'Romain'
-          git config --global user.email 'romain.fontugne@gmail.com'
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if [[ `git status --porcelain` ]]; then
             git add .
             git commit -am 'new data'
